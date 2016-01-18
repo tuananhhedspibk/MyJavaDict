@@ -1,0 +1,38 @@
+﻿		Use Manual
+1.Interface:
+1.1.Textareas:
+_The top left textarea is input text area. You can input to it to search word you want to search.
+	+If the word is available. Meaning of the word that you searched will be appeared in bottom left text area.
+	+If not, in the bottom right text area will appear words 
+	have the same soundex with the word that you searched and in the bottom left text area 
+	will appear words have the same prefix with the word which you searched.
+_The top right textarea is name of dictionary area.
+1.2.Buttons:
+_Each button has correlative explaininglabel.
+1.3.Menu:
+_Menu has Set Data MenuItem.
+_With Set Data you can choose type of dictionary you want to use.
+_My Dict has 3 dictionaries :English-Vietnamese, Vietnamese-English, French-Vietnamese.
+
+2.How To Use:
+2.1.Search Word:
+Step 1: You input the word which you want to search in top left textarea.
+Step 2: Click to the button - Search (magnified icon).
+2.2.Add Word:
+Step 1: Click to the button - Add (pencil icon).
+Step 2: Input the word which you want to add in the textfield of dialog box.
+Step 3: Wait for announce... Successful or UnSuccessful.
+2.3.Delete Word:
+Step 1: Click to the button - Delete (eraser icon).
+Step 2: Input the word which you want to delete in the textfield of dialog box.
+Step 3: Wait for announce... Successful or UnSuccessful.
+2.4.Help:
+Step 1: Click to the button - Help (float icon).
+Step 2: See the text-frame which will be appeared.
+2.5.Information About Dict:
+Step 1: Click to the button - Information (i icon).
+Step 2: See the message dialog which will be appeared.
+2.6.Exit Dict:
+Click to the button - Exit (Circle with line icon).
+
+Help Fun !! :))
