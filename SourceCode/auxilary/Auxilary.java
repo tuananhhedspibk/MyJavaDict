@@ -1,7 +1,7 @@
 package auxilary;
 
 public class Auxilary{ 
-	public int getDemicalValue (String str){
+	public int getDemicalValue (String str){				// --- Converte from 64(base) to 10(base) ---
 		String base64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 		int decValue = 0,pos;
 		int len = str.length();
@@ -13,7 +13,7 @@ public class Auxilary{
 		return decValue;
 	}
 
-	public String get64Value (long value){
+	public String get64Value (long value){					// --- Converte from 10(base) to 64(base) ---
 		String base64 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
 		char cbuf[] = new char[300];
 		int i = 0,length;

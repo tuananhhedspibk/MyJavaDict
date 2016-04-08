@@ -56,16 +56,16 @@ public class DictFunc implements DictFuncInterface{
 		}
 	}
 
-	public void setTextForArea(FieldOfDict field){
+	public void setTextForArea(FieldOfDict field){			// --- Clear text of TextArea ---
 		field.resultArea.setText("");
 		field.soundexArea.setText("");
 		field.inputArea.setText("");
 	}
 
-	public void checkSoundex(String soundexSound,String word,FieldOfDict field){
-		String valueOfSoundex = new String();
+	public void checkSoundex(String soundexSound,String word,FieldOfDict field){			// --- Push data to SoundexDict ---
+		String valueOfSoundex = new String();				// --- Store set of words have same soundex ---
 		if(field.soundexDict.containsKey(soundexSound)){
-			valueOfSoundex =field. soundexDict.get(soundexSound).toString();
+			valueOfSoundex = field.soundexDict.get(soundexSound).toString();
 			valueOfSoundex = valueOfSoundex + "\n" + word;
 			field.soundexDict.remove(soundexSound);
 			field.soundexDict.put(soundexSound,valueOfSoundex);
@@ -151,7 +151,7 @@ public class DictFunc implements DictFuncInterface{
 		}
 	}
 
-	public void helpFunc(FieldOfDict field){
+	public void helpFunc(FieldOfDict field){				// --- Display help 's frame ---
 		JTextArea helpText = new JTextArea();
 		JScrollPane scrollPane = new JScrollPane(helpText);
 		helpText.setEditable(false);
@@ -183,10 +183,10 @@ public class DictFunc implements DictFuncInterface{
 			else{
 				if(field.dict.containsKey(word)){
 					field.dict.remove(word);
-					JOptionPane.showMessageDialog(null,"Delete Word Successful","Announce",JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(null,"Delete Word Successfully","Announce",JOptionPane.INFORMATION_MESSAGE);
 				}
 				else{
-					JOptionPane.showMessageDialog(null,"Delete Word Unsuccessful Or Doesn't Delete","Announce",JOptionPane.INFORMATION_MESSAGE);
+					JOptionPane.showMessageDialog(null,"Delete Word Unsuccessfully Or Doesn't Delete","Announce",JOptionPane.INFORMATION_MESSAGE);
 				}
 			}
 			setTextForArea(field);
@@ -196,7 +196,7 @@ public class DictFunc implements DictFuncInterface{
 		}
 	}
 
-	public void infor(){
+	public void infor(){						// --- Display infor about app ---
 		Icon icon = new ImageIcon("Database/Picture/dictionary.png");
 		String msg;
 		msg = "This Is My Dictionary Application, Designed By Java Language\nWritten By AnhTT - HUST\nCopyright (c) 2015\nContact Me At :tuananhhedspibk@gmail.com For More Details";
@@ -239,7 +239,7 @@ public class DictFunc implements DictFuncInterface{
 		}
 	}
 
-	public void addWordToHistory(FieldOfDict field,String str){
+	public void addWordToHistory(FieldOfDict field,String str){					// --- History will store list words have been searched ---
 		int i;
 		for(i = 0 ; i < 20 ; i++){
 			if(field.historyList[i].equals(str)){
@@ -256,7 +256,7 @@ public class DictFunc implements DictFuncInterface{
 		field.historyList[0] = str;
 	}
 
-	public void copyWord(FieldOfDict field){
+	public void copyWord(FieldOfDict field){						// --- Copy func ---
 		String str = new String("");
 		field.subStr = "";
 		if(field.flag != 0){ 
